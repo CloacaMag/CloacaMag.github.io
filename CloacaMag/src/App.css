@@ -32,36 +32,26 @@
   align-items: center;
   font-size: calc(5px + 2vmin);
   color: black;
-  animation: bgcolorshift infinite 1s ease-out;
+  animation: bgcolorshift infinite 5s ease-in-out;
   
 }
-.image {
+.emailimage{
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+}
+.skeletonimage {
   position: absolute;
   top: 50%;
   left: 55%;
   width: 30vh;
   height: 50vh;
-  /* -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite; */
 }
-/* @-moz-keyframes spin { 
-  100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-  100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-  100% { 
-      -webkit-transform: rotate(360deg); 
-      transform:rotate(360deg); 
-  } 
-} */
 
 .App-link {
   color: #61dafb;
 } 
-
+ 
 @keyframes spin {
   from {
     transform: rotateX(0);
@@ -72,8 +62,9 @@
 }
 
 @keyframes bgcolorshift {
-  0%   {background-color: bisque; }
+  0%   {background-color: whitesmoke; }
   25%  {background-color: yellow; }
   50%  {background-color: orange; }
-  100% {background-color: red;}
+  75%  {background-color: red;}
+  100% {background-color: whitesmoke;}
 }
