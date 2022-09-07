@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/CloacaMag.github.io/static/css/main.09596fb5.css",
-    "main.js": "/CloacaMag.github.io/static/js/main.daa2911f.js",
-    "static/js/787.68f18b9c.chunk.js": "/CloacaMag.github.io/static/js/787.68f18b9c.chunk.js",
-    "static/media/dancingskeleton.gif": "/CloacaMag.github.io/static/media/dancingskeleton.8dc629edca92affe10f5.gif",
-    "static/media/logo.svg": "/CloacaMag.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/CloacaMag.github.io/index.html",
-    "main.09596fb5.css.map": "/CloacaMag.github.io/static/css/main.09596fb5.css.map",
-    "main.daa2911f.js.map": "/CloacaMag.github.io/static/js/main.daa2911f.js.map",
-    "787.68f18b9c.chunk.js.map": "/CloacaMag.github.io/static/js/787.68f18b9c.chunk.js.map"
+    "main.css": "/static/css/main.09596fb5.css",
+    "main.js": "/static/js/main.677b4b4f.js",
+    "static/js/787.68f18b9c.chunk.js": "/static/js/787.68f18b9c.chunk.js",
+    "static/media/dancingskeleton.gif": "/static/media/dancingskeleton.8dc629edca92affe10f5.gif",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.09596fb5.css.map": "/static/css/main.09596fb5.css.map",
+    "main.677b4b4f.js.map": "/static/js/main.677b4b4f.js.map",
+    "787.68f18b9c.chunk.js.map": "/static/js/787.68f18b9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.09596fb5.css",
-    "static/js/main.daa2911f.js"
+    "static/js/main.677b4b4f.js"
   ]
 }
