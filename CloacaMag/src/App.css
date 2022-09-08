@@ -7,6 +7,7 @@
   pointer-events: none;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,37 +16,89 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 12vh;
+  min-height: 100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  z-index: -1;
   color: white;
+  
+}
+.App-header h1 {
+  font-size: calc(10px + 2vmin);
+}
+.App-header h2 {
+  font-size: calc(5px + 2vmin);
 }
 
 .body {
+  z-index: 1;
   background-color: bisque;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(5px + 2vmin);
+  margin:auto;
+  border-radius: 15%;
+  
+  max-width: 80vw;
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content:center;
+  
+  font-size:  min(max(1rem, 4vw), 22px);
   color: black;
   animation: bgcolorshift infinite 5s ease-in-out;
+  margin-left: 10vw;
+  margin-right: 10vw;
   
 }
+.body p {
+  --minFontSize: 15px;
+  --maxFontSize: 25px;
+  --scaler: 10vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+  margin-left: 1vw;
+  margin-right: 1vw;
+  
+}
+
+.body h1{
+  --minFontSize: 20px;
+  --maxFontSize: 35px;
+  --scaler: 10vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+  margin-left: 1vw;
+  margin-right: 1vw;
+  
+}
+.body h1.animate{
+  animation: caseswitch infinite 2s ;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.body h1.small{
+  font-weight: normal;
+  --minFontSize: 10px;
+  --maxFontSize: 20px;
+  --scaler: 10vw;
+  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+  
+}
+
+
+/* .body :nth-child(3){
+  flex-wrap: wrap;
+  
+} */
 .emailimage{
-  position: relative;
   width: 20vh;
   height: 20vh;
 }
 .skeletonimage {
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  width: 30vh;
-  height: 50vh;
+  width: 20vw;
+  height: 20vh;
 }
 
 .App-link {
@@ -61,6 +114,22 @@
   }
 }
 
+@keyframes caseswitch {
+  25%{
+    text-transform: uppercase;
+    text-align: left;
+  }
+  50%{
+    text-transform: capitalize;
+    text-align: center;
+  }
+  75%{
+    text-transform: uppercase;
+    text-align: right;
+  }
+  
+  
+}
 @keyframes bgcolorshift {
   0%   {background-color: whitesmoke; }
   25%  {background-color: yellow; }
