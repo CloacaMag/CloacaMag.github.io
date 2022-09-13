@@ -36,7 +36,6 @@
   z-index: 1;
   background-color: bisque;
   margin:auto;
-  border-radius: 15%;
   
   max-width: 80vw;
   min-height: 100vh;
@@ -47,7 +46,7 @@
     align-items: center;
     align-content:center;
   
-  font-size:  min(max(1rem, 4vw), 22px);
+  
   color: black;
   animation: bgcolorshift infinite 5s ease-in-out;
   margin-left: 10vw;
@@ -55,9 +54,10 @@
   
 }
 .body p {
-  --minFontSize: 15px;
+  max-width: 80vw;
+  --minFontSize: 10px;
   --maxFontSize: 25px;
-  --scaler: 10vw;
+  --scaler: 5vw;
   font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
   margin-left: 1vw;
   margin-right: 1vw;
@@ -65,9 +65,10 @@
 }
 
 .body h1{
-  --minFontSize: 20px;
+  max-width: 80vw;
+  --minFontSize: 1px;
   --maxFontSize: 35px;
-  --scaler: 10vw;
+  --scaler: 5vw;
   font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
   margin-left: 1vw;
   margin-right: 1vw;
@@ -98,7 +99,7 @@
 }
 .skeletonimage {
   width: 20vw;
-  height: 20vh;
+  height: 30vh;
 }
 
 .App-link {
