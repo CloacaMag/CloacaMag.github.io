@@ -1,29 +1,52 @@
 .App {
-  text-align: center;
+  background-color: #282c34;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+pre {
+  white-space: no-wrap; /* Since CSS 2.1 */
+  word-break: keep-all;
+  word-wrap: break-word;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  --maxFontSize: 20px;
+  --minFontSize: 8px;
+  --scaler: 2vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  overflow-x: auto;
 }
 
+.justify {
+  margin: 10%;
+  margin-top: 0%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  overflow: visible;
+  --maxFontSize: 20px;
+  --minFontSize: 11px;
+  --scaler: 3vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  text-align-last: justify;
+}
+.justify > i {
+  --maxFontSize: 20px;
+  --minFontSize: 11px !important;
+  --scaler: 3vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  text-align-last: justify;
 }
 
 .App-header {
+  align-items: center;
   background-color: #282c34;
-  min-height: 100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content: center;
-  z-index: -1;
   color: white;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  overflow-x: auto;
+  z-index: -1;
 }
 .App-header h1 {
   font-size: calc(10px + 2vmin);
@@ -32,108 +55,298 @@
   font-size: calc(5px + 2vmin);
 }
 
-.body {
-  z-index: 1;
-  background-color: bisque;
-  margin:auto;
-  border-radius: 15%;
-  
-  max-width: 80vw;
-  min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content:center;
-  
-  font-size:  min(max(1rem, 4vw), 22px);
-  color: black;
+.App-header > ul {
+  align-items: center;
   animation: bgcolorshift infinite 5s ease-in-out;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  
+  list-style-position: inside;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  padding: 0%;
+  text-align: center;
+  width: 40vw;
 }
-.body p {
-  --minFontSize: 15px;
-  --maxFontSize: 25px;
-  --scaler: 10vw;
-  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
-  margin-left: 1vw;
-  margin-right: 1vw;
-  
+li {
+  display: block;
+  margin: 2vmin;
+  text-align: center;
 }
-
-.body h1{
-  --minFontSize: 20px;
-  --maxFontSize: 35px;
-  --scaler: 10vw;
-  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
-  margin-left: 1vw;
-  margin-right: 1vw;
-  
+li > .App-header > .active {
+  animation: bgcolorshift infinite 10s ease-in-out;
 }
-.body h1.animate{
-  animation: caseswitch infinite 2s ;
+.sample {
+  background-color: white;
+  color: black;
   margin-left: 10vw;
   margin-right: 10vw;
 }
-.body h1.small{
-  font-weight: normal;
-  --minFontSize: 10px;
+.sample p {
   --maxFontSize: 20px;
-  --scaler: 10vw;
-  font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
-  
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.about {
+  background-color: white;
+  color: black;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  animation: bgcolorshift infinite 10s ease-in-out;
+  height: 100vh;
+}
+.about p {
+  --maxFontSize: 20px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.about h1 {
+  --maxFontSize: 25px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 1vw;
+  margin-right: 1vw;
+  animation: caseswitch infinite 2s;
+}
+.about h2 {
+  --maxFontSize: 20px;
+  --minFontSize: 8px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
+.about img {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* .body :nth-child(3){
-  flex-wrap: wrap;
-  
-} */
-.emailimage{
-  width: 20vh;
+.hallozine p {
+  --maxFontSize: 20px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hallozine h1 {
+  --maxFontSize: 35px;
+  --minFontSize: 10px;
+  --scaler: 6vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.hallozine h1.animate {
+  animation: caseswitch infinite 2s;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.hallozine h1.small {
+  --maxFontSize: 20px;
+  --minFontSize: 10px;
+  --scaler: 10vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  font-weight: normal;
+}
+
+.hallozinelanding ul li {
+  --maxFontSize: 20px;
+  --minFontSize: 12px;
+  --scaler: 4vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  font-weight: normal;
+  color: red;
+  background-color: rgba(14, 0, 0, 0.8);
+}
+.hallozinelanding ul li a {
+  color: pink;
+  text-decoration: wavy;
+}
+
+.hallozinelanding {
+  background-color: transparent;
+  color: orangered;
+  width: 80vw;
+  height: 100vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hallozinelanding > ul {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 3%,
+    rgba(108, 105, 105, 1) 51%,
+    rgba(255, 255, 255, 0.1955307262569832) 100%
+  );
+  background-image: url("https://drive.google.com/uc?export=download&id=1Teyv6_c1dvuPYSFOQhnd9Lh0G0j3GViC");
+  background-size: 250vh;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0%;
+  margin: 0%;
+  align-items: flex-end;
+  height: 180vh;
+  width: 80vw;
+  /* clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 60%); */
+  pointer-events: auto;
+}
+
+.hallozinelanding > li {
+  margin: 1.8vmin;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.hallozineoutlet {
+  /* padding-right: 10vw; */
+
+  width: fit-content;
+  align-items: flex-end;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hallozineoutlet ul {
+  margin-top: 15vh;
+  border: 4px solid red;
+  background-color: #282c34;
+  padding-bottom: 15vh;
+  z-index: 6;
+  align-items: center;
+  white-space: nowrap;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0%;
+  text-align: center;
+  margin-left: 20vw;
+  pointer-events: auto;
+  display: flex;
+}
+.hallozineoutlet ul li {
+  width: auto;
+}
+.hallozineimage {
+  position: absolute;
+
+  z-index: 3;
+  margin-top: 50vh;
+  padding-left: 10vw;
+}
+.hallozineimage img {
+  height: 50vh;
+  width: 40vw;
+}
+.hallozineoutlet p {
+  padding-bottom: 5vh;
+  margin-top: 0%;
+  height: 100%;
+  width: 90vw;
+  background-color: #282c34;
+  color: red;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  pointer-events: auto;
+  line-height: 25px;
+  align-items: center;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.hallozineoutlet p strong {
+  --maxFontSize: 25px;
+  --minFontSize: 18px;
+  --scaler: 3vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}
+.hallozineoutlet p i {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  --maxFontSize: 20px;
+  --minFontSize: 8px;
+  --scaler: 3vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+}
+.hallozineoutlet p img {
+  width: 70vw;
+  height: auto;
+  margin-left: 10vw;
+}
+
+.hallozinecontent {
+  margin-top: 50vh;
+  width: 20vw;
+  height: auto;
+  margin-left: 10vw;
+  overflow: auto;
+
+  align-items: center;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  margin-top: 5vh;
+  height: 100vh;
+}
+.emailimage {
   height: 20vh;
+  width: 20vh;
 }
 .skeletonimage {
-  width: 20vw;
   height: 20vh;
+  width: 20vw;
 }
 
 .App-link {
   color: #61dafb;
-} 
- 
-@keyframes spin {
-  from {
-    transform: rotateX(0);
-  }
-  to {
-    transform: rotateX(60);
-  }
 }
 
 @keyframes caseswitch {
-  25%{
-    text-transform: uppercase;
+  25% {
     text-align: left;
-  }
-  50%{
-    text-transform: capitalize;
-    text-align: center;
-  }
-  75%{
     text-transform: uppercase;
-    text-align: right;
   }
-  
-  
+  50% {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  75% {
+    text-align: right;
+    text-transform: uppercase;
+  }
 }
 @keyframes bgcolorshift {
-  0%   {background-color: whitesmoke; }
-  25%  {background-color: yellow; }
-  50%  {background-color: orange; }
-  75%  {background-color: red;}
-  100% {background-color: whitesmoke;}
+  0% {
+    background-color: whitesmoke;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: whitesmoke;
+  }
 }

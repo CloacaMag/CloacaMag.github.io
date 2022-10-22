@@ -1,47 +1,124 @@
-import logo from "./logo.svg";
-import "./App.css";
-import skeleton from "./dancingskeleton.gif";
-import email from "./email.gif";
 
-function App() {
+import "./App.css";
+
+import { BrowserRouter as Router,
+Routes,
+Route,
+NavLink,
+ } from "react-router-dom";
+import { Component } from "react";
+
+import About from "./component/about";
+import Contact from "./component/contact";
+
+import {RB, } from "./component/Authors/rb";
+import Landing from "./component/Landing_Hallozine2022"
+import {Megforajter} from "./component/Authors/megforajter";
+import {Saramatson} from "./component/Authors/saramatson";
+import {Simonbrown} from "./component/Authors/simonbrown";
+import {Stephanielanesutton} from "./component/Authors/stephanielanesutton";
+import {Ashelyadams} from "./component/Authors/ashelyadams";
+import {Elf} from "./component/Authors/elf";
+import {Quinnrfairchild} from "./component/Authors/quinnrfairchild";
+import {Philipsorenson} from "./component/Authors/philipsorensen";
+import {Joebielecki} from "./component/Authors/joebielecki";
+import {Avahoffman} from "./component/Authors/avahoffman";
+import {Laurapaul} from "./component/Authors/laurapaul"
+import {Orifienberg} from "./component/Authors/orifienberg"
+
+
+
+class App extends Component{
+  render(){
   return (
-    <div className="App">
+
+    <Router>
+    
+    <div>
+
+
       <header className="App-header">
+        
         <h1>Cloaca Mag</h1>
         <h2>piss///birth///////shithole</h2>
+        
+        <ul>
+        
+          <li a className="active">
+            <NavLink to='/about'>About</NavLink>
+          </li>
+          <li a className="active">
+            <NavLink to='/contact'>Contact Us</NavLink>
+          </li>
+     
+          
+          <li>
+     
+            <NavLink to='/'>Hallozine</NavLink>
+          </li>
+          
+        </ul>
+        
+        <Routes>
+        <Route exact path="/" element={< Landing />}></Route>
+        <Route exact path="about" element={< About />}></Route>
+        
+        <Route exact path="contact" element={<Contact />}></Route>
+        
+        <Route exact path="/" element={<Landing />}>
+          <Route path='rb' element={<RB />}>
+          
+          </Route>
+          <Route path='Megforajter' element ={<Megforajter/>}>
+         
+          </Route>
+          <Route path='Simonbrown' element ={<Simonbrown/>}>
+          
+          </Route>
+          <Route path='Saramatson' element ={<Saramatson/>}>
+          
+          </Route>
+          <Route path='Stephanielanesutton' element ={<Stephanielanesutton/>}>
+   
+          </Route>
+          <Route path='Ashelyadams' element ={<Ashelyadams/>}>
+          
+          </Route>
+          <Route path='Quinnrfairchild' element ={<Quinnrfairchild/>}>
+          
+          </Route>
+          <Route path='Elf' element ={<Elf/>}>
+          
+          </Route>
+          <Route path='Philipsorensen' element ={<Philipsorenson/>}>
+         
+          </Route>
+          <Route path='Joebielecki' element ={<Joebielecki />}>
+          
+          </Route>
+          <Route path='Avahoffman' element ={<Avahoffman />}>
+          
+          </Route>
+          <Route path='Laurapaul' element ={<Laurapaul/>}>
+          
+          </Route>
+          <Route path='Orifienberg' element ={<Orifienberg/>}>
+          
+          </Route>
+        </Route>
+        </Routes>
+        
       
-      <body className="body">
-        <p>
-          whoa welcome to our sweetttt hallozine website<br></br>
-          submit your delicious whatever/s to:<h1> CloacaMag@gmail.com</h1>
-        </p>
-
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXVZgPPsVgzmChpClSjkPxxQkXMnLWCRWHPkwXPsNQdQGpwjgpGLbFCKPvJrkWmkgMVSB">
-          <img className="emailimage" src={email} alt="wiggly pixely skeleton hand email link"></img>
-        </a>
-
-        <h1>
-          <h1 className="animate">
-          [desired]
-          <br></br>
-          </h1>
-          <h1 className="small">
-            Gore! body horror! PISSPOEM putrification seances RITUALS HEXES<br></br>
-            LUSTBONES FLASH FICTS PROSE POEMS FAIRY TALES SKINLESS THINGS FISH
-            HEADS <br></br>Fridge toes anything clawed anything rancid <br></br>Images: Lofi plz<br></br>
-            WHEN IN DOUBT: SLEAZE IT UP
-          </h1>
-        </h1>
-
-        <img
-          className="skeletonimage"
-          alt="a sweet ass dancing skeleton from like a 90s geocities site"
-          src={skeleton}
-        ></img>
-      </body>
-      </header>
+     </header>
     </div>
+    </Router>
+
   );
+  
+        
+        
+  
+}
 }
 
 export default App;
