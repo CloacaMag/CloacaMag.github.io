@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.83e48387.css",
-    "main.js": "./static/js/main.771d925e.js",
-    "static/js/787.68f18b9c.chunk.js": "./static/js/787.68f18b9c.chunk.js",
-    "index.html": "./index.html",
-    "main.83e48387.css.map": "./static/css/main.83e48387.css.map",
-    "main.771d925e.js.map": "./static/js/main.771d925e.js.map",
-    "787.68f18b9c.chunk.js.map": "./static/js/787.68f18b9c.chunk.js.map"
+    "main.css": "/cloacamag.com/static/css/main.83e48387.css",
+    "main.js": "/cloacamag.com/static/js/main.94361ffb.js",
+    "static/js/787.68f18b9c.chunk.js": "/cloacamag.com/static/js/787.68f18b9c.chunk.js",
+    "index.html": "/cloacamag.com/index.html",
+    "main.83e48387.css.map": "/cloacamag.com/static/css/main.83e48387.css.map",
+    "main.94361ffb.js.map": "/cloacamag.com/static/js/main.94361ffb.js.map",
+    "787.68f18b9c.chunk.js.map": "/cloacamag.com/static/js/787.68f18b9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83e48387.css",
-    "static/js/main.771d925e.js"
+    "static/js/main.94361ffb.js"
   ]
 }
